@@ -135,4 +135,8 @@ Route::middleware('auth') -> prefix('my') -> group( function () {
   	Route::post('/update-profile-pic', [ProfileController::class, 'UpdateProfilePicture']) -> name('client.update-profile-pic');
 });
 
+
+// Contact
+Route::post('/send-email', 'App\Http\Controllers\Dev\SendEmailController@sendEmail')->name('send.email');
+
 require __DIR__.'/auth.php';

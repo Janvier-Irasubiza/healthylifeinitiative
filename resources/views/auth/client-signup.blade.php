@@ -10,19 +10,19 @@
 
             <div>
                 <label class="w-full" for="name">Names</label>
-                <input class="w-full mt-1" type="text" name="name" placeholder="Enter your full name" autofocus>
+                <input class="w-full mt-1" type="text" name="name" value="{{ old('name') }}" placeholder="Enter your full name" autofocus>
                 <x-input-error :messages="$errors->get('name')" class="mt-2" />
             </div>
 
             <div>
                 <label class="w-full mt-4" for="email">Email</label>
-                <input class="w-full mt-1" type="text" name="email" placeholder="Enter your email">
+                <input class="w-full mt-1" type="text" name="email" value="{{ old('email') }}" placeholder="Enter your email">
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
             <div>
                 <label class="mt-4 w-full" for="email">Phone number</label>
-                <input class="w-full mt-1" type="text" name="phone" placeholder="Enter your phone number">
+                <input class="w-full mt-1" type="text" name="phone" value="{{ old('phone') }}" placeholder="Enter your phone number">
                 <x-input-error :messages="$errors->get('phone')" class="mt-2" />
             </div>
 
